@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santa's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+ body {
+  font-family: Arial, sans-serif;
+  background-image:         
+        url('https://w0.peakpx.com/wallpaper/137/819/HD-wallpaper-merry-christmas-hn-2021-feliz-merry-christmas-feliz-navidad-merry-navidad-thumbnail.jpg');
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  background-position: center; /* Centers the image */
+  color: #fff; /* Sets the text color to white for readability */
+  margin: 0;
+  padding: 0;
+}
+
+    header {
+      text-align: center;
+      background: linear-gradient(45deg, #c0392b, #f39c12);
+      padding: 20px;
+      color: #fff;
+    }
+
+    .santa-photo {
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    .snowflakes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10%;
+      color: #fff;
+      font-size: 24px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+
+    /* Add animation delay and randomness for snowflakes */
+    .snowflake:nth-child(n) {
+      font-size: calc(10px + 1vmin);
+      left: calc(5% * var(--i));
+      animation-duration: calc(7s + var(--i) * 1s);
+      animation-delay: calc(var(--i) * -0.5s);
+    }
+
+    section {
+      padding: 20px;
+      text-align: center;
+      background-color: #f0f8ff;
+      color: #333;
+      margin: 20px auto;
+      border-radius: 15px;
+      width: 80%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color: #c0392b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #c0392b;
+      color: #fff;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      color: #fff;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    nav ul li a {
+      color: black;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="snowflakes" aria-hidden="true">
+    <!-- Increased number of snowflakes -->
+    <div class="snowflake" style="--i:1;">❄</div>
+    <div class="snowflake" style="--i:2;">❄</div>
+    <div class="snowflake" style="--i:3;">❄</div>
+    <div class="snowflake" style="--i:4;">❄</div>
+    <div class="snowflake" style="--i:5;">❄</div>
+    <div class="snowflake" style="--i:6;">❄</div>
+    <div class="snowflake" style="--i:7;">❄</div>
+    <div class="snowflake" style="--i:8;">❄</div>
+    <div class="snowflake" style="--i:9;">❄</div>
+    <div class="snowflake" style="--i:10;">❄</div>
+    <div class="snowflake" style="--i:11;">❄</div>
+    <div class="snowflake" style="--i:12;">❄</div>
+    <div class="snowflake" style="--i:13;">❄</div>
+    <div class="snowflake" style="--i:14;">❄</div>
+    <div class="snowflake" style="--i:15;">❄</div>
+    <div class="snowflake" style="--i:16;">❄</div>
+    <div class="snowflake" style="--i:17;">❄</div>
+    <div class="snowflake" style="--i:18;">❄</div>
+    <div class="snowflake" style="--i:19;">❄</div>
+    <div class="snowflake" style="--i:20;">❄</div>
+    <div class="snowflake" style="--i:21;">❄</div>
+    <div class="snowflake" style="--i:22;">❄</div>
+    <div class="snowflake" style="--i:23;">❄</div>
+    <div class="snowflake" style="--i:24;">❄</div>
+    <div class="snowflake" style="--i:25;">❄</div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+        <li><a href="#services">Service</a></li><li><a href="#services">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#action-plan">Action Plan</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  
+  
+  
+  
+<section id="about">
+  <p class="top-text">
+    <span class="im">I'm</span> <span class="santa"><u>Santa Claus,</u></span>
+  </p>
+  <p class="gift-specialist">Gift Specialist</p>
+  <div class="about-content">
+    <img src="https://png.pngtree.com/png-vector/20231027/ourmid/pngtree-portrait-of-happy-santa-claus-at-his-room-at-home-near-png-image_10342936.png" alt="Santa Claus" class="santa-photo">
+  </div>
+  <div class="about-text">
+    <p>
+      Hi! I'm Santa Claus, bringing joy and gifts to children around the world. Based at the North Pole, I dedicate my time to spreading holiday cheer and ensuring that every child wakes up to a present on Christmas morning. My workshop is powered by the hard work of my elves, and I travel around the globe in a sleigh pulled by reindeer to deliver joy to all. My mission is to spread kindness and make the world a little brighter every year.
+    </p>
+  </div>
+  <!-- Portfolio and Hire Me section -->
+  <div class="text-circle">
+    <span class="portfolio">Portfolio</span>
+    <span class="hire-me">Hire Me</span>
+  </div>
+</section>
+
+  <style>
+    #about {
+   display: fill;
+  background: white;
+   width: 100%;
+ 
+  border-radius: 0px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+  max-width: 100%;
+}
+
+.top-text {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-top: 70px; 
+  margin-bottom:-40px;
+  text-align: center;
+}
+
+.gift-specialist {
+  font-size: 3rem;font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.im {
+  color: black;
+}
+
+.santa {
+  color: #C1272D;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+    
+
+.santa-photo {
+  width: 500px; /* Adjusted image size */
+  height: auto;
+  border-radius: 10px;
+  margin-top: -80px;
+}
+
+.about-text {
+  color: black;
+  font-size: 1.2rem;
+  text-align: fill; /* Ensure left alignment for the text */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* New text circles styles */
+.text-circle {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+.portfolio {
+  background-color: #C1272D; /* Red background */
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.hire-me {
+  background-color: white;
+  color: black;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+  </style>
+  
+  
+  
+<section id="services"> 
+  <h2><span class="services-text"> My Services</span></h2> 
+  <div class="service-items">
+    <div class="service-box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9XuqDhFd2bszRDzf0bqfZT7WF4XXk8bL0dQ&s" alt="Gift Delivery" class="service-image">
+      <strong>Gift Delivery</strong>
+      <p>Santa ensures that gifts are delivered to children worldwide on Christmas Eve. Using his magical sleigh powered by reindeer, he reaches every home, spreading joy and fulfilling wishes.</p>
+    </div>
+    <div class="service-box">
+      <img src="https://cdn-icons-png.freepik.com/256/8679/8679700.png?semt=ais_hybrid" alt="Wish Fulfillment" class="service-image">
+      <strong>Wish Fulfillment</strong>
+      <p>Santa listens to the wishes of children through letters, ensuring that their dreams come true by creating personalized gifts crafted by his dedicated team of elves.</p>
+    </div>
+    <div class="service-box">
+      <img src="https://cdn0.iconfinder.com/data/icons/social-network-27/32/emoji_social_face_fun_giggles_reaction_emotion_happy_smile-512.png" alt="Spreading Holiday Cheer" class="service-image">
+      <strong>Spreading Holiday Cheer</strong>
+      <p>Santa brings smiles and happiness to people of all ages through his jolly demeanor, iconic "Ho Ho Ho," and by fostering a spirit of generosity and kindness during the holiday season.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Services Section Styles */
+#services {
+  background-color: #fff0;
+  max-width: 2900px;
+  width: 100%; /* Adjust to full width */
+  padding: 40px 20px; /* Optional padding for the section */
+  margin-bottom:100px;
+  margin-top:40px;
+}
+
+#services h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left; /* Align text to the left */
+}
+
+.services-text {
+  color: white;
+}
+
+.service-items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.service-box {
+  background-color: white;
+  padding: 100px; /* Reduced padding */
+  width: 20%;
+  border-radius: 180px;
+  box-shadow: none; /* Removed the box-shadow */
+  text-align: center;
+  margin-right: 58px; /* Add margin to the right for space between boxes */
+}
+
+.service-box:last-child {
+  margin-right: 0; /* Remove right margin from the last item */
+}
+
+.service-image {
+  width: 80px; /* Adjust the image size */
+  height: 80px; /* Adjust the image size */
+  margin-bottom: 15px; /* Space between image and heading */
+}
+
+.service-box strong {
+  display: block;
+  font-size: 1.8rem;
+  color: #C1272D; /* Red color for the service name */
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  color: black; /* Black color for the description */
+  font-size: 1rem;
+}
+
+#services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#services li {
+  background-color: transparent;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#services li strong {
+  font-weight: bold;
+  color: #ff4444;
+}
+</style>
+
+
+
+
+  
+  
+  
+  
+  
+  
+<section id="experience">
+  <h2 class="section-title"><span class="my-text">My</span> <span class="experience-text">Experience</span></h2>
+  <div class="experience-carousel">
+    <div class="experience-card">
+      <h3 class="experience-heading">Gift Delivery Specialist</h3>
+      <p class="experience-location"><strong>North Pole</strong> (Year - Present)</p>
+      <p class="experience-description">Responsible for delivering gifts to children worldwide, ensuring the utmost precision and timeliness in every delivery.</p>
+    </div>
+    <div class="experience-card">
+      <h3 class="experience-heading">Holiday Cheer Coordinator</h3>
+      <p class="experience-location"><strong>Worldwide</strong> (Year - Year)</p>
+      <p class="experience-description">Organized festive events and surprise visits to bring smiles and holiday spirit to communities across the globe.</p>
+    </div>
+    <div class="experience-card">
+      <h3 class="experience-heading">Workshop Director</h3>
+      <p class="experience-location"><strong>North Pole</strong> (Year - Present)</p>
+      <p class="experience-description">Managed a team of elves in designing and creating toys, gifts, and holiday decorations, overseeing all production operations in the workshop.</p>
+    </div>
+    <div class="experience-card">
+      <h3 class="experience-heading">Santa's Chief Advisor</h3>
+      <p class="experience-location"><strong>North Pole</strong> (Year - Present)</p>
+      <p class="experience-description">Act as a key advisor to Santa on operations and strategies to enhance holiday magic, ensuring everything runs smoothly at the North Pole.</p>
+    </div>
+  </div>
+  <div class="experience-image">
+    <img src="https://www.pngarts.com/files/3/Santa-PNG-Image-with-Transparent-Background.png" alt="Santa" />
+  </div>
+</section>
+
+<style>
+/* Experience Section Styles */
+#experience {
+  background-color: #fff;
+  padding: 50px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.my-text {
+  color: black;
+}
+
+.experience-text {
+  color: #C1272D;
+}
+
+/* Carousel Container */
+.experience-carousel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.experience-card {
+  background-color: #C1272D;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.experience-card:hover {
+  transform: scale(1.05); /* Slightly enlarges on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card:active {
+  transform: scale(0.95); /* Shrinks on tap/click for animation effect */
+}
+
+.experience-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.experience-location {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.experience-description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.experience-image img {
+  width: 600px;
+  display: block;
+  margin: 30px auto 0;
+}
+
+@media (max-width: 768px) {
+  .experience-card {
+    flex: 0 0 100%; /* Full width cards for smaller screens */
+  }
+
+  #experience h2 {
+    font-size: 2.5rem;
+  }
+
+  .experience-carousel {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+
+
+
+  
+  
+  
+<section id="skills">
+  <h2 class="section-title"> My Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card">
+      <i class="fa fa-gift skill-icon"></i>
+      <h3 class="skill-title">Gift Wrapping</h3>
+      <p class="skill-description">Creative and professional wrapping for all occasions.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fa fa-clock skill-icon"></i>
+      <h3 class="skill-title">Time Management</h3>
+      <p class="skill-description">Efficiently organizing and prioritizing tasks to meet deadlines.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fa fa-paw skill-icon"></i>
+      <h3 class="skill-title">Reindeer Handling</h3>
+      <p class="skill-description">Expert in reindeer care, management, and training.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fa fa-calendar-check skill-icon"></i>
+      <h3 class="skill-title">Event Planning</h3>
+      <p class="skill-description">Planning and executing memorable events with attention to detail.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fa fa-cogs skill-icon"></i>
+      <h3 class="skill-title">Workshop Management</h3>
+      <p class="skill-description">Organizing and facilitating engaging, productive workshops.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fa fa-paint-brush skill-icon"></i>
+      <h3 class="skill-title">Creative Gift Design</h3>
+      <p class="skill-description">Designing unique and customized gifts that stand out.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Skills Section (Similar to Services Section) */
+#skills {
+  background-color: #fff0; /* Light gray background for consistency */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: white; /* Set the font color to white */
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center; /* Center align skill cards */
+}
+
+.skill-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  width: calc(33.333% - 20px); /* Three cards per row */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px); /* Lift card on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.skill-icon {
+  font-size: 3rem;
+  color: #ff4444;
+  margin-bottom: 15px;
+}
+
+.skill-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #C1272D;
+  margin-bottom: 10px;
+}
+
+.skill-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .skill-card {
+    width: calc(50% - 20px); /* Two cards per row for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-card {
+    width: 100%; /* Full-width cards for smaller screens */
+  }
+
+
+</style>
+
+
+  
+<section id="action-plan" style="background-color: white; padding: 40px 20px; border-radius: 20px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); margin: 30px auto; width: 85%; font-family: 'Roboto', sans-serif; color: #333;">
+  <!-- Section Header -->
+  <div style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 40px; text-align: center;">
+    <!-- Santa Image -->
+    <div style="flex: 1 1 200px; display: flex; justify-content: center; margin-bottom: 20px;">
+      <img src="https://png.pngtree.com/png-vector/20230808/ourmid/pngtree-santa-letter-vector-png-image_6950314.png" alt="Santa Letter" style="max-width: 200px; border-radius: 10px; transition: transform 0.3s ease;">
+    </div>
+    <!-- Title and Description -->
+    <div style="flex: 2 1 300px; padding-left: 20px;">
+      <h2 style="color: #C1272D; font-size: 2.5rem; line-height: 1.2;">
+        Santa's Strategic Action Plan
+      </h2>
+      <p style="font-size: 1.2rem; color: black; margin-top: 10px;">
+        It's time to gear up and get organized! This plan will help Santa make his holiday season more efficient, fun, and impactful. Let's get started!
+      </p>
+    </div>
+  </div>
+
+  <!-- Action Plan Cards -->
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
+
+    <!-- First Row of 3 Action Plans -->
+    <div class="action-card" style="background: linear-gradient(to bottom, #f39c12, #f7b731);">
+      <h3>🎁 Optimize Gift Distribution</h3>
+      <p>AI-driven logistics and route optimization will ensure no gifts are left behind. Santa’s sleigh will glide smoothly!</p>
+    </div>
+    <div class="action-card" style="background: linear-gradient(to bottom, #33cc33, #66ff66);">
+      <h3>🎉 Digital Engagement</h3>
+      <p>Santa’s social media takeover—live Q&As, fun holiday content, and interactive games for the kiddos!</p>
+    </div>
+    <div class="action-card" style="background: linear-gradient(to bottom, #ff5733, #ff8f33);">
+      <h3>🛠 Workshop Efficiency</h3>
+      <p>Tech-enabled elf workshops, with enhanced training, automation, and productivity tools to craft all the toys!</p>
+    </div>
+
+    <!-- Second Row of 3 Action Plans -->
+    <div class="action-card" style="background: linear-gradient(to bottom, #c0392b, #e74c3c);">
+      <h3>🌍 Sustainability</h3>
+      <p>Eco-friendly sleighs, sustainable toy packaging, and minimal carbon footprints will keep the spirit of Christmas green!</p>
+    </div>
+    <div class="action-card" style="background: linear-gradient(to bottom, #3498db, #5dade2);">
+      <h3>🛋 Virtual North Pole Tours</h3>
+      <p>Take a 360-degree tour of the North Pole with Santa. Cozy up with hot cocoa for the full experience!</p>
+    </div>
+    <div class="action-card" style="background: linear-gradient(to bottom, #8e44ad, #9b59b6);">
+      <h3>🎅 Santa's Health Plan</h3>
+      <p>Santa will start yoga, meditation, and smoothie days to ensure he’s fit and fab for the big night!</p>
+    </div>
+
+    <!-- Third Row with Single Wide Action Plan -->
+    <div class="action-card wide" style="background: linear-gradient(to bottom, #e74c3c, #f39c12);">
+      <h3>🎁 Holiday Stress-Free Plan</h3>
+      <p>Santa's new holiday hack: Take a deep breath and enjoy the magic of Christmas! No stress, just fun.</p>
+    </div>
+
+  </div>
+
+  <!-- Target Calendar -->
+  <div style="background-color: #f7f7f7; border-radius: 15px; padding: 30px; margin-top: 40px; text-align: center;">
+    <h3 style="color: #c0392b; font-size: 1.8rem; margin-bottom: 20px;">🎄 Countdown to Christmas with Action Targets</h3>
+    <iframe src="https://calendar.google.com/calendar/embed?src=c_6gfj0ik1h0vkhi9p9lb8lhhmk0%40group.calendar.google.com&ctz=UTC&mode=MONTH&showTitle=0&showNav=1&showDate=0&showPrint=0&showTabs=0" style="border: 0; width: 100%; height: 500px; border-radius: 15px;" frameborder="0" scrolling="no"></iframe>
+  </div>
+</section>
+
+<style>
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #action-plan {
+      width: 95%;
+    }
+    .action-card {
+      flex: 1 1 100%; /* Stacks cards on small screens */
+    }
+  }
+
+  /* Action Card Styling */
+  .action-card {
+    flex: 1 1 250px; /* Makes cards equal width */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px; /* Uniform spacing between cards */
+  }
+  .action-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .action-card.wide {
+    flex: 1 1 100%; /* Makes this card take up the entire row */
+    width: 100%;
+  }
+
+  /* Section Title Styling */
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  /* Adding some styling for larger screens */
+  @media (min-width: 769px) {
+    .action-card {
+      flex: 1 1 30%; /* Adjusts to 3 cards per row on medium screens */
+    }
+    .action-card.wide {
+      flex: 1 1 100%; /* This ensures the wide card stays full-width */
+    }
+  }
+</style>
+
+
+
+
+  
+  
+  
+  
+  
+
+  <footer id="contact" style="background: #c0392b; color: #ffffff; padding: 20px;">
+
+    <!-- Header for Contact Santa -->
+    <div style="text-align: center; margin-bottom: 15px;">
+      <h2 style="font-size: 30px; margin: 0; color: #ffffff;margin-top: 30px;margin-bottom: 40px;">Contact Santa</h2>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; max-width: 1200px;margin: 0 auto;">
+      <!-- Left Side: Contact Details -->
+      <div style="flex: 1; min-width: 300px; padding: 10px;">
+        <div style="text-align: center; margin: 20px 0;">
+
+          <img src="https://png.pngtree.com/png-vector/20240919/ourmid/pngtree-d-santa-claus-with-deer-carrying-festive-gifts-on-transparent-background-png-image_13846898.png" alt="Santa with Gifts" style="width: 150px; border-radius: 10px; ">
+
+        </div>
+        <p><strong>Email:</strong> <a href="mailto:santa@northpole.com" style="color: #ffffff; text-decoration: none;">santa@northpole.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+180072682" style="color: #ffffff; text-decoration: none;">+1-800-SANTA (72682)</a></p>
+        <p><strong>Location:</strong> Santa's Workshop, North Pole</p>
+        <p><strong>Working Hours:</strong> 9:00 AM - 11:59 PM (North Pole Time)</p>
+      </div>
+
+      <!-- Right Side: Query Form -->
+      <div style="flex: 1; min-width: 350px; padding: 10px;">
+        <form style="background: #ffffff; padding: 40px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); color: #333;">
+          <label for="name" style="font-weight: bold; display: block; margin-bottom: 5px;">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" style="width: 100%; padding: 5px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required>
+
+          <label for="email" style="font-weight: bold; display: block; margin-bottom: 5px;">Your Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" style="width: 100%; padding: 5px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required>
+
+          <label for="query" style="font-weight: bold; display: block; margin-bottom: 5px;">Your Query:</label>
+          <textarea id="query" name="query" placeholder="Type your query here" style="width: 100%; padding: 5px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; height: 100px;" required></textarea>
+
+          <button type="submit" style="width: 100%; padding: 12px; background: #c0392b; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 16px;">Send Query</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
