@@ -22,7 +22,7 @@ This portfolio is crafted entirely with **HTML** and **CSS**, showcasing simplic
 
 ---
 
-## ✨ About  
+## ✨ About
 
 This portfolio provides an interactive and visually stunning view of Santa's world. From his action-packed plans to managing the North Pole, Santa's dedication to spreading joy is on full display.
 
